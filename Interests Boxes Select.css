@@ -7,7 +7,6 @@
 }
 
 body {
-  width: 1200px;
   margin: 0 auto;
 }
 
@@ -18,6 +17,8 @@ body {
 }
 
 .container {
+  width: 1200px;
+  margin: 10px auto;
   background-color: var(--elements-background-color);
   display: flex;
   flex-flow: column;
@@ -27,7 +28,8 @@ body {
 }
 
 .choose {
-  width: 100%;
+  width: 1200px;
+  margin: 10px auto;
   height: 60px;
   padding: 20px;
   display: flex;
@@ -36,6 +38,7 @@ body {
   color: var(--main-purple-color);
   font-size: 1.3rem;
   font-weight: bold;
+  background-color: var(--elements-background-color);
 }
 
 .boxes {
@@ -57,7 +60,7 @@ body {
 
 .box {
   margin: 5px;
-  width: calc((100% - 20px) / 5);
+  width: 285px;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -69,16 +72,15 @@ body {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-label{
+label {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   text-align: center;
-
 }
-label p{
+label p {
   margin-bottom: 7px;
 }
 label img {
@@ -126,9 +128,14 @@ label img {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-.box:hover {
-  border-color: #5c48f1;
-}
+
 input:hover::before {
   visibility: visible;
+}
+input[type="checkbox"]:hover {
+  border-color: #5c48f1;
+}
+
+input:checked::after {
+  border-color: #5c48f1;
 }
