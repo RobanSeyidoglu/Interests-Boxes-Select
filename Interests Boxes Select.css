@@ -62,17 +62,73 @@ body {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   border: 5px solid var(--element-border-color);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
-
-.binary img {
-  width: 150px;
-  height: 150px;
-}
-
-.box p {
+label{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
   text-align: center;
+
+}
+label p{
+  margin-bottom: 7px;
+}
+label img {
+  width: 150px;
+  height: 150px;
   margin-bottom: 5px;
+}
+
+.box input {
+  position: relative;
+  border: none;
+  outline: 2px solid var(--element-border-color);
+  border-radius: 2px;
+  appearance: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+.box input::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  opacity: 20%;
+  transform: translate(12%, 12%);
+  background-color: #5c48f1;
+  border-radius: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  visibility: hidden;
+}
+.box input:checked::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  transform: translate(12%, 12%);
+  background-color: #5c48f1;
+  border-radius: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.box:hover {
+  border-color: #5c48f1;
+}
+input:hover::before {
+  visibility: visible;
 }
